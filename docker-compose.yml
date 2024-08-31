@@ -1,3 +1,5 @@
+# Note to self: the source of truth for this file is at
+# https://github.com/SidneyBovet/games_database_docker/blob/master/Dockerfile
 services:
   web:
     build: .
