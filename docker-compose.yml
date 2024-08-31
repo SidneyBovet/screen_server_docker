@@ -8,5 +8,6 @@ services:
       - "26652:26652"
     labels:
       net.unraid.docker.managed: 'composeman'
-      net.unraid.docker.icon: 'https://cdn3.iconfinder.com/data/icons/electrical-components/100/feb-elecomp-go-17-512.p>      net.unraid.docker.webui: ''
+      net.unraid.docker.icon: 'https://cdn3.iconfinder.com/data/icons/electrical-components/100/feb-elecomp-go-17-512.png'
+      net.unraid.docker.webui: ''
       net.unraid.docker.shell: ''
