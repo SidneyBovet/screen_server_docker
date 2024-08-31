@@ -1,0 +1,3 @@
+[submodule "rpi-screen-service"]
+	path = rpi-screen-service
+	url = git@github.com:SidneyBovet/rpi-screen-service.git
