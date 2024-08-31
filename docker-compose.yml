@@ -5,9 +5,10 @@ services:
     build: .
     volumes:
       - .:/app
-    command: /app/targets/release/screen-server --config config.json
+    # Installed by the Dockerfile:
+    command: screen-server -c rpi-screen-service/config.json -l rpi-screen-service/log4rs_config.yml
     ports:
-      - "26652:26652"
+      - "26652:26652/tcp"
     labels:
       net.unraid.docker.managed: 'composeman'
       net.unraid.docker.icon: 'https://cdn3.iconfinder.com/data/icons/electrical-components/100/feb-elecomp-go-17-512.png'

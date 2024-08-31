@@ -1,0 +1,7 @@
+/target
+
+# This contains API keys
+config.json
+
+# Log files from debug runs
+/log

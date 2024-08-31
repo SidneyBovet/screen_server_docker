@@ -1,6 +1,14 @@
-FROM rust:1.67
+FROM rust:1.80
 
 WORKDIR /app
-COPY . .
+COPY rpi-screen-service/ .
 
-RUN cargo install --path .
+RUN apt update && \
+  apt install --no-install-recommends --assume-yes \
+    protobuf-compiler \
+    libprotobuf-dev \
+    libssl-dev && \
+  cargo install --bin screen-server --features="server" --path .
+
+# This is taken care of by the compose file's `command` line.
+#CMD ["screen-server", "-c" "config.json"]
